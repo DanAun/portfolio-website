@@ -23,6 +23,40 @@
     scroll-behavior: smooth;
 }
 
+h1 {
+    font-size: var(--h1-font);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: var(--h3-font);
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+h4 {
+    font-size: var(--h4-font);
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+h5 {
+    font-size: var(--h5-font);
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+p {
+    font-size: var(--p-font);
+    margin-bottom: 20px;
+    color: var(--second-color);
+}
+
 header {
     position: fixed;
     align-items: center;
@@ -44,7 +78,7 @@ header {
     flex-direction: row;
 
     .logo {
-        margin-right: 60px;
+        margin-right: 100px;
     }
 
     .logo, a {
@@ -53,6 +87,10 @@ header {
         text-decoration: none;
         font-size: 20px;
         border-radius: var(--border-radius);
+    }
+
+    a {
+        margin-right: 20px;
     }
     a:hover {
         background-color: var(--main-color);
@@ -75,28 +113,12 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: right;
         z-index: -1;
     }
 
     .home-content {
         margin-left: var(--left-margin);
-    
-        h1 {
-            font-size: var(--h1-font);
-            margin-bottom: 20px;
-        }
-    
-        h3 {
-            font-size: var(--h3-font);
-            margin-bottom: 20px;
-            color: var(--main-color);
-        }
-    
-        h4 {
-            font-size: var(--h4-font);
-            margin-bottom: 20px;
-            color: var(--main-color);
-        }
     }
 }
 
@@ -141,29 +163,79 @@ header {
         .about-text {
             margin-left: 100px;
             margin-right: 60px;
-    
-            h2 {
-                font-size: var(--h2-font);
-                margin-bottom: 20px;
-            }
-    
-            p {
-                font-size: var(--p-font);
-                margin-bottom: 20px;
-                color: var(--second-color);
-            }
-
-            h4 {
-                font-size: var(--h4-font);
-                margin-bottom: 20px;
-                color: var(--main-color);
-            }
-
-            h5 {
-                font-size: var(--h5-font);
-                margin-bottom: 20px;
-                color: var(--text-color);
-            }
         }
+    }
+}
+
+#projects {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .projects-content {
+        text-align: center;
+    }
+
+    .projects-grid {
+        display: flex;
+        margin-top: 100px;
+    }
+}
+
+#contact {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contact-content {
+        text-align: center;
+    }
+
+    .contact-grid {
+        display: flex;
+        margin-top: 100px;
+    }
+
+    .contact-grid div {
+        margin-right: 20px;
+    }
+
+    .contact-grid div:last-child {
+        margin-right: 0;
+    }
+
+    .contact-grid div a {
+        display: block;
+        text-decoration: none;
+        font-size: 20px;
+        color: var(--main-color);
+    }
+
+    .contact-grid div a:hover {
+        color: var(--second-color);
+    }
+}
+
+.to-top{
+	position: fixed;
+	bottom: 2.1rem;
+	right: 2.1rem;
+    height: 20px;
+    width: 20px;
+    color: var(--text-color);
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    
+    &:hover {
+        background-color: transparent;
     }
 }
