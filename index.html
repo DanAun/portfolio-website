@@ -1,70 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to my website</title>
+    <title>Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body>
-    <h1>My Terrarium</h1>
-    <div id="page">
-        <div id="left-container" class="container">
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
-            </div>
-            <div class="plant-holder">
-                <div class="plant-holder">
-                    <img class="plant" alt="plant" id="plant2" src="./images/plant2.png" />
-                </div>
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant3" src="./images/plant3.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant4" src="./images/plant4.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant5" src="./images/plant5.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant6" src="./images/plant6.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant7" src="./images/plant7.png" />
-            </div>
-        </div>
-        <div id="right-container" class="container">
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant8" src="./images/plant8.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant9" src="./images/plant9.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant10" src="./images/plant10.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant11" src="./images/plant11.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant12" src="./images/plant12.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant13" src="./images/plant13.png" />
-            </div>
-            <div class="plant-holder">
-                <img class="plant" alt="plant" id="plant14" src="./images/plant14.png" />
+    <header>
+        <ul class="navbar">
+            <li class="logo">Port<span>folio</span></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <!-- Add more sections here-->
+        </ul>
+    </header>
+    <section id="home">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="images/background.mp4" type="video/mp4">
+        </video>
+        <div class="home-content">
+            <h4>Hello</h4>
+            <h1>I'm Daniel Aunan</h1>
+            <h3>Software Developer and Programming Enthusiast</h3>
+            <a href="" class="button" target="_blank">Download Resume</a>
+    </section>
+    <section id="about">
+        <div class="about-content">
+            <img src="images/profile.webp" alt="Profile Picture">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <h4>Hi, My name is Daniel Aunan !!</h4>
+                <p>I am a 5th Year Student at INSA Toulouse, Pursuing My Degree in Computer Scicence. I have a keen interest in Problem Solving and Finding new and Dynamic Ideas.</p><br>
+                <p>I am a Cybersecurity enthusiast &amp; Fullstack Web Developer.</p>
+                <a href="#contact" class="button">Contact Me</a>
             </div>
         </div>
-        <div id="terrarium">
-            <div class="jar-top"></div>
-            <div class="jar-walls">
-                <div class="jar-glossy-long"></div>
-                <div class="jar-glossy-short"></div>
-            </div>
-            <div class="dirt"></div>
-            <div class="jar-bottom"></div>
-        </div>
-    </div>
+    </section>
+
+    </section>
+    <!-- Add more sections here-->
 </body>
 </html>
+
