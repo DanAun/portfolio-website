@@ -5,16 +5,16 @@
 	--main-color: #25d74e;
 	--second-color: gray;
 	--other-color: #12141c;
-	--h1-font: 14vh;
-	--h2-font: 7vh;
-    --h3-font: 4vh;
+	--h1-font: 8vh;
+	--h2-font: 5vh;
+    --h3-font: 3vh;
     --h4-font: 2.5vh;
     --h5-font: 1vh;
 	--p-font: 2.3vh;
     --left-margin: 15%;
     --border-radius: 0.5rem;
     --side-margin: 20px;
-    --spacing-unit: 10px;
+    --spacing-unit: 20px;
     --navbar-height: 6vh;
 }
 
@@ -294,6 +294,7 @@ header {
 
     .projects-grid {
         display: flex;
+        justify-content: center;
         margin-top: 100px;
     }
 }
@@ -360,6 +361,12 @@ header {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     :root {
+        --h1-font: 14vh;
+        --h2-font: 7vh;
+        --h3-font: 4vh;
+        --h4-font: 2.5vh;
+        --h5-font: 1vh;
+        --p-font: 2.3vh;
         --side-margin: 300px;
         --spacing-unit: 20px;
     }
