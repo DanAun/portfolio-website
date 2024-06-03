@@ -1,4 +1,4 @@
-
+/* Small devices (portrait tablets and large phones, 600px and up) */
 :root{
 	--bg-color: #020312;
 	--text-color: white;
@@ -6,9 +6,9 @@
 	--second-color: gray;
 	--other-color: #12141c;
 	--h1-font: 14vh;
-	--h2-font: 8vh;
+	--h2-font: 7vh;
     --h3-font: 4vh;
-    --h4-font: 3vh;
+    --h4-font: 2.5vh;
     --h5-font: 1vh;
 	--p-font: 2.3vh;
     --left-margin: 15%;
@@ -203,12 +203,12 @@ header {
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto auto;
         width: 70%;
-        gap: calc(2.5 * var(--unitary-margin));
-        justify-content: space-evenly;
-        text-align: center;
-        margin-top: calc(2.5 * var(--unitary-margin));
+        gap: 5vh;
+        margin-top: calc(var(--unitary-margin));
 
         .skill{
             display: flex;
@@ -244,7 +244,7 @@ header {
         }
 
         h5 {
-            margin: 0.5vh 0 0;
+            margin: 1vh 0 0;
             font-style: italic;
             font-size: 0.9rem;
         }
@@ -341,5 +341,18 @@ header {
     
     &:hover {
         background-color: transparent;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .skills-grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: auto auto auto;
+        width: 70%;
+        gap: 5vh;
+        margin-top: calc(var(--unitary-margin));
     }
 }
