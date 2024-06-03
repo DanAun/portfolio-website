@@ -1,4 +1,4 @@
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Defining some variables to be used in the styles */
 :root{
 	--bg-color: #020312;
 	--text-color: white;
@@ -13,10 +13,12 @@
 	--p-font: 2.3vh;
     --left-margin: 15%;
     --border-radius: 0.5rem;
-    --unitary-margin: 1.3rem;
+    --side-margin: 20px;
+    --spacing-unit: 10px;
     --navbar-height: 6vh;
 }
 
+/* General styles */
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
@@ -28,47 +30,68 @@
 
 h1 {
     font-size: var(--h1-font);
-    margin-bottom: var(--unitary-margin);
+    margin-bottom: var(--spacing-unit);
 }
 
 h2 {
     font-size: var(--h2-font);
-    margin-bottom: var(--unitary-margin);
+    margin-bottom: var(--spacing-unit);
 }
 
 h3 {
     font-size: var(--h3-font);
-    margin-bottom: var(--unitary-margin);
+    margin-bottom: var(--spacing-unit);
     color: var(--main-color);
 }
 
 h4 {
     font-size: var(--h4-font);
-    margin-bottom: var(--unitary-margin);
+    margin-bottom: var(--spacing-unit);
     color: var(--main-color);
 }
 
 h5 {
     font-size: var(--h5-font);
-    margin-bottom: var(--unitary-margin);
+    margin-bottom: var(--spacing-unit);
     color: var(--text-color);
 }
 
 p {
     font-size: var(--p-font);
-    margin-bottom: var(--unitary-margin);
+    margin-bottom: var(--spacing-unit);
     color: var(--second-color);
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
 header {
     position: fixed;
-    align-items: center;
-    justify-content: left;
-    margin-top: var(--unitary-margin);
-    width: calc(100% - var(--left-margin));
-    padding-left: var(--left-margin);
+    width: 100%;
+    background-color: black;
+    opacity: 0.8;
 
-    span {
+    .hotbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu {
+        margin-right: var(--spacing-unit);
+    }
+
+    &:hover .navbar a{
+        display: flex;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        height: var(--navbar-height);
+        margin-left: var(--spacing-unit);
+        font-size: var(--h4-font);
+        font-weight: bold;
+    }
+    .logo span {
         font-size: var(--h4-font);
         font-weight: bold;
         color: var(--main-color);
@@ -76,25 +99,18 @@ header {
 }
 
 .navbar{
-    height: var(--navbar-height);
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-
-    .logo {
-        margin-right: calc(5 * var(--unitary-margin));
-    }
-
-    .logo, a {
-        display: block;
-        padding: 10px;
-        text-decoration: none;
-        font-size: var(--h4-font);
-        border-radius: var(--border-radius);
-    }
+    flex-direction: column;
 
     a {
-        margin-right: var(--unitary-margin);
+        display: none;
+        align-items: center;
+        height: var(--navbar-height);
+        padding-left: var(--spacing-unit);
+        text-decoration: none;
+        font-size: var(--h4-font);
+        width: 100%;
     }
     a:hover {
         background-color: var(--main-color);
@@ -129,7 +145,7 @@ header {
 .button {
     display: inline-block;
     text-decoration: none;
-	padding: 14px 40px;
+	padding: 7px 20px;
 	border-radius: var(--border-radius);
 	font-size: 17px;
 	font-weight: bold;
@@ -145,10 +161,10 @@ header {
 }
 
 #about {
-    height: 100vh;
     width: 100%;
     background-color: var(--bg-color);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -156,28 +172,24 @@ header {
         width: 200px;
         height: 200px;
         border-radius: 30%;
-        margin-bottom: 20px;
-        margin-left: var(--left-margin);
+        margin: calc(2*var(--spacing-unit)) auto;
     }
 
     .about-content {
-        height: calc(100vh - calc(2 * (var(--navbar-height) + 3 * var(--unitary-margin))));
-        margin: calc(var(--navbar-height) + 3 * var(--unitary-margin)) 0;
+        margin: calc(var(--navbar-height) + 3 * var(--spacing-unit)) 0;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
         .about-text {
-            height: 100%;
             display: inline;
-            max-width: 50%;
-            max-height: 100%;
-            margin-left: calc(5 * var(--unitary-margin));
-            margin-right: calc(5 * var(--unitary-margin));
+            text-align: center;
+            margin: 0 var(--side-margin);
 
             .abilities{
                 list-style-position: inside;
-                margin-top: var(--unitary-margin);
+                margin-top: var(--spacing-unit);
                 h4 {
                     color: var(--text-color);
                 }
@@ -187,7 +199,7 @@ header {
 }
 
 #skills {
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     background-color: var(--bg-color);
     display: flex;
@@ -197,18 +209,19 @@ header {
     text-align: center;
 
     h2 {
-
-        margin-top: calc( 2* var(--navbar-height));
+        margin: calc( 2* var(--navbar-height)) 10vw var(--spacing-unit);
     }
+
+    h4 {
+        margin: 0 var(--side-margin);}
 
     .skills-grid {
         display: grid;
         justify-content: center;
         align-items: center;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
         width: 70%;
-        gap: 5vh;
-        margin-top: calc(var(--unitary-margin));
+        margin-top: calc(var(--spacing-unit));
 
         .skill{
             display: flex;
@@ -217,7 +230,7 @@ header {
             justify-content: center;
             width: 10vh;
             border-radius: 5px;
-            margin: 0 3rem;
+            margin: 2vh 3rem;
             transition: all .40s ease;
         }
 
@@ -346,13 +359,57 @@ header {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .skills-grid {
-        display: grid;
-        justify-content: center;
-        align-items: center;
+    :root {
+        --side-margin: 300px;
+        --spacing-unit: 20px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: row;
+        .logo {
+            margin-left: var(--side-margin);
+            margin-right: calc(4 * var(--spacing-unit));
+        }
+    }
+    .menu {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: row;
+        a {
+            display: flex;
+            padding: 0 var(--spacing-unit);
+            border-radius: var(--border-radius);
+        }
+    }
+
+    #about .about-content {
+        flex-direction: row;
+    }
+
+    #about img {
+        margin: auto calc(2 * var(--spacing-unit)) auto var(--side-margin);
+    }
+
+    #about .about-content .about-text {
+        text-align: left;
+        margin: 0 var(--side-margin) 0 var(--spacing-unit);
+    }
+    #about, #skills {
+        height: 100vh;
+    }
+    
+    #skills .skills-grid {
         grid-template-columns: auto auto auto;
-        width: 70%;
-        gap: 5vh;
-        margin-top: calc(var(--unitary-margin));
+    }
+
+    #skills h4 {
+        margin: var(--navbar-height) 0;
+    }
+
+    .button {
+        padding: 14px 40px;
     }
 }
