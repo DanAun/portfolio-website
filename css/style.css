@@ -17,6 +17,7 @@
     --navbar-height: 6vh;
 }
 
+
 /* General styles */
 * {
     box-sizing: border-box;
@@ -137,8 +138,10 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        object-position: left;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: left;
+           object-position: left;
         z-index: -1;
     }
 
