@@ -20,6 +20,8 @@
 
 /* General styles */
 * {
+    -webkit-appearance:none;
+    appearance: none;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
