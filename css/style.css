@@ -75,10 +75,6 @@ header {
     /*opacity: 0.8;*/
 
     .hotbar {
-        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-        display: -ms-flexbox; /* TWEENER - IE 10 */
-        display: -webkit-flex; /* NEW - Chrome */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -89,18 +85,10 @@ header {
     }
 
     &:hover .navbar a{
-        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-        display: -ms-flexbox; /* TWEENER - IE 10 */
-        display: -webkit-flex; /* NEW - Chrome */
         display: flex;
     }
 
     .logo {
-        display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-        display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-        display: -ms-flexbox; /* TWEENER - IE 10 */
-        display: -webkit-flex; /* NEW - Chrome */
         display: flex;
         align-items: center;
         height: var(--navbar-height);
@@ -117,10 +105,7 @@ header {
 
 .navbar{
     list-style-type: none;
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox; /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Chrome */
+
     display: flex;
     flex-direction: column;
 
@@ -144,10 +129,6 @@ header {
     width: 100%;
     background-size: cover;
     background-position: center;
-    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-    display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox; /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -357,10 +338,6 @@ header {
         text-decoration: none;
         font-size: 20px;
         color: var(--main-color);
-    }
-
-    .contact-grid div a:hover {
-        color: var(--second-color);
     }
 }
 
