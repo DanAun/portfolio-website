@@ -4,17 +4,18 @@
     --text-color: white;
     --main-color: #25d74e;
     --second-color: gray;
-    --h1-font: 8vh;
-    --h2-font: 5vh;
-    --h3-font: 3vh;
-    --h4-font: 2.5vh;
-    --h5-font: 1vh;
+    --h1-font: 60px;
+    --h2-font: 40px;
+    --h3-font: 20px;
+    --h4-font: 15px;
+    --h5-font: 10px;
     --p-font: 2.3vh;
     --left-margin: 15%;
     --border-radius: 0.5rem;
     --side-margin: 20px;
     --spacing-unit: 10px;
     --nav-font: 2.5vh;
+    --skill-img-size: 40px;
 }
 
 
@@ -30,17 +31,17 @@
 
 h1 {
     font-size: var(--h1-font);
-    margin-bottom: var(--spacing-unit);
+    margin-bottom: calc(4*var(--spacing-unit));
 }
 
 h2 {
     font-size: var(--h2-font);
-    margin-bottom: var(--spacing-unit);
+    margin-bottom: calc(3*var(--spacing-unit));
 }
 
 h3 {
     font-size: var(--h3-font);
-    margin-bottom: var(--spacing-unit);
+    margin-bottom: calc(2*var(--spacing-unit));
     color: var(--main-color);
 }
 
@@ -115,10 +116,9 @@ header:hover .navbar{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 
-    /* Created too many problems on mobile */
     video {
         position: absolute;
         top: 0;
@@ -134,78 +134,44 @@ header:hover .navbar{
     }
 }
 
-.button {
-    display: inline-block;
-    text-decoration: none;
-	padding: 7px 20px;
-	border-radius: var(--border-radius);
-	font-size: 17px;
-	font-weight: bold;
-	background: var(--main-color);
-	color: var(--text-color);
-	border: 1px solid var(--main-color);
-	transition: all .40s ease;
-
-    &:hover {
-        background: transparent;
-        color: var(--main-color);
-    }
-}
-
 #about {
+    overflow: auto;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     img {
-        width: 200px;
-        height: 200px;
+        display: block;
+        max-width: min(70%, 200px);
         border-radius: 30%;
-        margin: calc(2*var(--spacing-unit)) auto;
+        margin: calc(5*var(--nav-font)) auto calc(3*var(--spacing-unit));
     }
 
-    .about-content {
-        margin: calc(var(--navbar-height) + 3 * var(--spacing-unit)) 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .about-text{
+        max-width: 70%;
+        text-align: center;
+        margin: auto;
 
-        .about-text {
-            display: inline;
-            text-align: center;
-            margin: 0 var(--side-margin);
-
-            .abilities{
-                list-style-position: inside;
-                margin-top: var(--spacing-unit);
-                h4 {
-                    color: var(--text-color);
-                }
+        .abilities{
+            list-style-position: inside;
+            margin: calc(3*var(--spacing-unit)) auto;
+            h3 {
+                color: var(--text-color);
             }
         }
     }
 }
 
 #skills {
-    height: 200vh;
+    overflow: auto;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--bg-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
 
     h2 {
-        margin: calc( 2* var(--navbar-height)) 10vw var(--spacing-unit);
+        margin: calc(5*var(--nav-font)) auto var(--spacing-unit);
     }
-
-    h4 {
-        margin: 0 var(--side-margin);}
 
     .skills-grid {
         display: grid;
@@ -213,21 +179,12 @@ header:hover .navbar{
         align-items: center;
         grid-template-columns: auto;
         width: 70%;
-        margin-top: calc(var(--spacing-unit));
+        margin: calc(2*var(--spacing-unit)) auto 0;
 
-        .skill{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 10vh;
+        .skill {
             border-radius: 5px;
-            margin: 2vh 3rem;
+            margin: 2vh auto;
             transition: all .40s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-10px);
         }
 
         /* Creates the line to show when a skill is hovered */
@@ -240,7 +197,10 @@ header:hover .navbar{
             border-radius: 2px;
             background: var(--main-color);
             transition: width 0.4s ease;
+        }
 
+        .skill:hover {
+            transform: translateY(-10px);
         }
 
         /* Shows the line when the skill is hovered */
@@ -248,58 +208,54 @@ header:hover .navbar{
             width: 70%;
         }
 
-        h5 {
-            margin: 1vh 0 0;
+        h4 {
+            margin: 1vh auto 0;
             font-style: italic;
-            font-size: 0.9rem;
+            color: var(--text-color);
+            text-align: center;
         }
 
         .img-border {
-            width: 10vh;
-            height: 10vh;
+            width: calc(1.6*var(--skill-img-size));
+            height: calc(1.6*var(--skill-img-size));
+            margin: auto;
             border-radius: 50%;
-            background-color: white; /* For browsers that do not support gradients */
-            background-image: linear-gradient(to right, lightgrey, white);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background-color: white;
         }
 
         img {
-            width: 6vh;
-            height: 6vh;
+            width: var(--skill-img-size);
+            height: var(--skill-img-size);
+            /* Centers image by calculating margin based on img-border size */
+            margin: calc(0.3*var(--skill-img-size)) auto;
         }
     }
 }
 
 #projects {
-    height: 100vh;
+    overflow: auto;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     .projects-content {
+        margin: calc(5*var(--nav-font)) auto;
         text-align: center;
     }
 
     .projects-grid {
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
+        margin: calc(3*var(--spacing-unit)) auto;
     }
 }
 
 #contact {
-    height: 100vh;
+    overflow: auto;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     .contact-content {
+        margin: calc(5*var(--nav-font)) auto;
         text-align: center;
     }
 
@@ -320,6 +276,24 @@ header:hover .navbar{
         display: block;
         text-decoration: none;
         font-size: 20px;
+        color: var(--main-color);
+    }
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+	padding: 7px 20px;
+	border-radius: var(--border-radius);
+	font-size: var(--h4-font);
+	font-weight: bold;
+	background: var(--main-color);
+	color: var(--text-color);
+	border: 1px solid var(--main-color);
+	transition: all .40s ease;
+
+    &:hover {
+        background-color: transparent;
         color: var(--main-color);
     }
 }
@@ -387,6 +361,13 @@ header:hover .navbar{
         display: flex !important; /* Funky way of overriding the display: inline of default css. Use javascript to avoid this*/
     }
 
+    #about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
     #about .about-content {
         flex-direction: row;
     }
