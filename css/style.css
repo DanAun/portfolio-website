@@ -1,6 +1,6 @@
 /* Defining some variables to be used in the styles */
 :root {
-    --bg-color: black;/*#0d1010;*/
+    --bg-color: #0d1010;
     --text-color: white;
     --main-color: #25d74e;
     --second-color: gray;
@@ -13,8 +13,8 @@
     --left-margin: 15%;
     --border-radius: 0.5rem;
     --side-margin: 20px;
-    --spacing-unit: 20px;
-    --navbar-height: 6vh;
+    --spacing-unit: 10px;
+    --nav-font: 2.5vh;
 }
 
 
@@ -72,66 +72,53 @@ header {
     position: fixed;
     width: 100%;
     background-color: black;
-    /*opacity: 0.8;*/
+    opacity: 0.8;
+    font-size: var(--nav-font);
+    font-weight: bold;
 
     .hotbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .logo, .bx-menu {
+            margin: var(--spacing-unit) calc(2 * var(--spacing-unit));
+        }
+
+        .logo span {
+            color: var(--main-color);
+        }
     }
 
-    .menu {
-        margin-right: var(--spacing-unit);
-    }
-
-    &:hover .navbar a{
-        display: flex;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        height: var(--navbar-height);
-        margin-left: var(--spacing-unit);
-        font-size: var(--h4-font);
-        font-weight: bold;
-    }
-    .logo span {
-        font-size: var(--h4-font);
-        font-weight: bold;
-        color: var(--main-color);
+    .navbar{
+        display: none; /* Hides the navbar */
+        list-style-type: none;
+    
+        a {
+            display: block;
+            padding: var(--spacing-unit) calc(2 * var(--spacing-unit));
+            text-decoration: none;
+            width: 100%;
+        }
+    
+        a:hover {
+            background-color: var(--main-color);
+        }
     }
 }
 
-.navbar{
-    list-style-type: none;
-
-    display: flex;
-    flex-direction: column;
-
-    a {
-        display: none;
-        align-items: center;
-        height: var(--navbar-height);
-        padding-left: var(--spacing-unit);
-        text-decoration: none;
-        font-size: var(--h4-font);
-        width: 100%;
-    }
-
-    a:hover {
-        background-color: var(--main-color);
-    }
+/* Swap this part out with javascript onClick() */
+header:hover .navbar{
+    display: inline; /* Shows the navbar */
 }
 
 #home {
+    /*display: flex; /* Might mess on mobile (iOS)
+    justify-content: center;
+    align-items: center;*/
     height: 100vh;
     width: 100%;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+
 
     video {
         position: absolute;
@@ -139,15 +126,12 @@ header {
         left: 0;
         width: 100%;
         height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: left;
-           object-position: left;
+        object-fit: cover;
         z-index: -1;
     }
 
-    .home-content {
-        margin-left: var(--left-margin);
+    .home-text {
+        margin: var(--spacing-unit);
     }
 }
 
@@ -373,28 +357,35 @@ header {
         --h5-font: 1vh;
         --p-font: 2.3vh;
         --side-margin: 300px;
-        --spacing-unit: 20px;
+        --spacing-unit: 15px;
     }
 
     header {
         display: flex;
-        flex-direction: row;
-        .logo {
-            margin-left: var(--side-margin);
-            margin-right: calc(4 * var(--spacing-unit));
+        justify-content: space-around;
+        align-items: center;
+
+        .hotbar .logo {
+            margin: var(--spacing-unit) 0;
         }
-    }
-    .menu {
-        display: none;
+
+        .hotbar .bx-menu {
+            display: none; /* Hides the menu icon on large devices*/
+        }
+
+        .navbar {
+            display: flex;
+            a {
+                margin: var(--spacing-unit) calc(2 * var(--spacing-unit));
+                text-align: center;
+                padding: calc(0.5 * var(--spacing-unit));
+                border-radius: var(--border-radius);
+            }
+        }
     }
 
-    .navbar {
-        flex-direction: row;
-        a {
-            display: flex;
-            padding: 0 var(--spacing-unit);
-            border-radius: var(--border-radius);
-        }
+    header:hover .navbar{
+        display: flex !important; /* Funky way of overriding the display: inline of default css. Use javascript to avoid this*/
     }
 
     #about .about-content {
