@@ -193,7 +193,7 @@ header:hover .navbar{
             display: block;
             width: 0;
             height: 4px;
-            margin-top: 8px;
+            margin: 8px auto 0;
             border-radius: 2px;
             background: var(--main-color);
             transition: width 0.4s ease;
