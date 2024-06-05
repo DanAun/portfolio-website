@@ -118,7 +118,7 @@ header:hover .navbar{
     height: 100vh;
     width: 100%;
 
-    /* Crated too many problems on mobile */
+    /* Created too many problems on mobile */
     video {
         position: absolute;
         top: 0;
