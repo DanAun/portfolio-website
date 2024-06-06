@@ -8,13 +8,10 @@
     --h2-font: 40px;
     --h3-font: 20px;
     --h4-font: 15px;
-    --h5-font: 10px;
-    --p-font: 2.3vh;
-    --left-margin: 15%;
-    --border-radius: 0.5rem;
-    --side-margin: 20px;
+    --p-font: 10px;
+    --border-radius: 5px;
     --spacing-unit: 10px;
-    --nav-font: 2.5vh;
+    --nav-font: 15px;
     --skill-img-size: 40px;
 }
 
@@ -49,12 +46,6 @@ h4 {
     font-size: var(--h4-font);
     margin-bottom: var(--spacing-unit);
     color: var(--main-color);
-}
-
-h5 {
-    font-size: var(--h5-font);
-    margin-bottom: var(--spacing-unit);
-    color: var(--text-color);
 }
 
 p {
@@ -183,7 +174,7 @@ header:hover .navbar{
 
         .skill {
             border-radius: 5px;
-            margin: 2vh auto;
+            margin: 10px auto;
             transition: all .40s ease;
         }
 
@@ -283,7 +274,7 @@ header:hover .navbar{
 .button {
     display: inline-block;
     text-decoration: none;
-	padding: 7px 20px;
+	padding: 7px 13px;
 	border-radius: var(--border-radius);
 	font-size: var(--h4-font);
 	font-weight: bold;
@@ -300,13 +291,13 @@ header:hover .navbar{
 
 .to-top{
 	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
+	bottom: 20px;
+	right: 20px;
     color: var(--text-color);
     background: var(--main-color);
     border: 1px solid var(--main-color);
     padding: 5px;
-    border-radius: 0.5rem;
+    border-radius: 5px;
     text-decoration: none;
     
     .bx-up-arrow-alt {
@@ -325,7 +316,6 @@ header:hover .navbar{
         --h2-font: 7vh;
         --h3-font: 4vh;
         --h4-font: 2.5vh;
-        --h5-font: 1vh;
         --p-font: 2.3vh;
         --side-margin: 300px;
         --spacing-unit: 15px;
