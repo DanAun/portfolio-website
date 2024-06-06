@@ -161,7 +161,7 @@ header:hover .navbar{
     text-align: center;
 
     h2 {
-        margin: calc(5*var(--nav-font)) auto var(--spacing-unit);
+        margin: calc(5*var(--nav-font)) 10% var(--spacing-unit);
     }
 
     .skills-grid {
