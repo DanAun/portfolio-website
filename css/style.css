@@ -1,3 +1,4 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
 /* Defining some variables to be used in the styles */
 :root {
     --bg-color: #0d1010;
@@ -7,8 +8,8 @@
     --h1-font: 60px;
     --h2-font: 40px;
     --h3-font: 20px;
-    --h4-font: 15px;
-    --p-font: 10px;
+    --h4-font: 17px;
+    --p-font: 13px;
     --border-radius: 5px;
     --spacing-unit: 10px;
     --nav-font: 15px;
@@ -54,7 +55,6 @@ p {
     color: var(--second-color);
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 body {
     background-color: var(--bg-color);
 }
@@ -168,9 +168,8 @@ header:hover .navbar{
         display: grid;
         justify-content: center;
         align-items: center;
-        grid-template-columns: auto;
-        width: 70%;
-        margin: calc(2*var(--spacing-unit)) auto 0;
+        grid-template-columns: repeat(2, 1fr);
+        margin: calc(2*var(--spacing-unit)) 10% 0;
 
         .skill {
             border-radius: 5px;
@@ -309,8 +308,13 @@ header:hover .navbar{
     }
 }
 
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {
+
+}*/
+
 /* Large devices (laptops/desktops, 992px and up) */
-@media screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) {
     :root {
         --h1-font: 14vh;
         --h2-font: 7vh;
