@@ -1,0 +1,45 @@
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root {
+        --h1-font: 90px;
+        --h2-font: 50px;
+        --h3-font: 25px;
+        --h4-font: 20px;
+        --h5-font: 16px;
+        --p-font: 16px;
+        --spacing-unit: 12px;
+        --nav-font: 17px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .hotbar .logo {
+            margin: var(--spacing-unit) 0;
+        }
+
+        .hotbar .bx-menu {
+            display: none;
+        }
+
+        .navbar {
+            display: flex;
+            a {
+                margin: var(--spacing-unit) calc(2 * var(--spacing-unit));
+                text-align: center;
+                padding: calc(0.5 * var(--spacing-unit)) var(--spacing-unit);
+                border-radius: var(--border-radius);
+            }
+        }
+    }
+
+    header:hover .navbar{
+        display: flex !important; /* Funky way of overriding the display: inline of default css. Use javascript to avoid this*/
+    }
+    
+    #skills .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

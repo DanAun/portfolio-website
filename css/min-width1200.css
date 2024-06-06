@@ -1,0 +1,33 @@
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    :root {
+        --h1-font: 90px;
+        --h2-font: 50px;
+        --h3-font: 25px;
+        --h4-font: 20px;
+        --h5-font: 16px;
+        --p-font: 16px;
+        --spacing-unit: 12px;
+        --nav-font: 17px;
+    }
+
+    #about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            max-width: 250px;
+            max-height: 250px;
+            margin-right: calc(4*var(--spacing-unit));
+        }
+        .about-text {
+            width: 50%;
+            margin: calc(5*var(--nav-font)) auto calc(3*var(--spacing-unit)) 0;
+        }
+    }
+
+    #skills .skills-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
