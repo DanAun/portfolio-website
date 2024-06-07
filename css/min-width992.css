@@ -34,10 +34,6 @@
             }
         }
     }
-
-    header:hover .navbar{
-        display: flex !important; /* Funky way of overriding the display: inline of default css. Use javascript to avoid this*/
-    }
     
     #skills .skills-grid {
         grid-template-columns: repeat(3, 1fr);

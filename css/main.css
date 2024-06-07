@@ -79,6 +79,10 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        .bx-menu {
+            cursor: pointer;
+        }
+
         .logo, .bx-menu {
             margin: var(--spacing-unit) calc(2 * var(--spacing-unit));
         }
@@ -88,8 +92,7 @@ header {
         }
     }
 
-    .navbar{
-        display: none; /* Hides the navbar */
+    #navbar{
         list-style-type: none;
     
         a {
@@ -103,11 +106,6 @@ header {
             background-color: var(--main-color);
         }
     }
-}
-
-/* Swap this part out with javascript onClick() */
-header:hover .navbar{
-    display: inline; /* Shows the navbar */
 }
 
 #home {

@@ -4,20 +4,22 @@
     <title>Portfolio</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/min-width992.css">
-    <link rel="stylesheet" href="./css/min-width1200.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/min-width992.css">
+    <link rel="stylesheet" href="css/min-width1200.css">
+
     <!-- Imports the boxicons stylesheet-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
     <header>
         <div class="hotbar">
             <span class="logo">Port<span>folio</span></span>
-            <i class='bx bx-menu'></i>
+            <i class='bx bx-menu' onclick="toggleNavbar()"></i>
         </div>
-        <nav class="navbar">
+        <nav id="navbar" onclick="toggleNavbar()">
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -151,12 +153,15 @@
             </form>-->
         </div>
     </section>
-    <!-- Add more sections here-->
+    <!-- Add more sections here -->
 
-    <!--To top-->
+    <!--To top -->
     <a href="#home" class="to-top">
         <i class='bx bx-up-arrow-alt'></i>
     </a>
+
+    <!-- Imports the javascript main file -->
+    <script src="javascript/main.js"></script>
 </body>
 </html>
 
