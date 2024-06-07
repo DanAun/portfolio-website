@@ -35,7 +35,7 @@ h1 {
 
 h2 {
     font-size: var(--h2-font);
-    margin-bottom: calc(3*var(--spacing-unit));
+    margin-bottom: calc(2*var(--spacing-unit));
 }
 
 h3 {
@@ -258,26 +258,34 @@ header {
     .contact-content {
         margin: calc(5*var(--nav-font)) auto;
         text-align: center;
-    }
+        max-width: 70%;
 
-    .contact-grid {
-        display: flex;
-        margin-top: 100px;
-    }
+        .contact-form {
+            margin: auto;
+            input, textarea{
+                display: block;
+                margin: calc(2*var(--spacing-unit)) auto;
+                border-radius: var(--border-radius);
+                padding: 10px;
+                width: min(100%, 500px);
+                color: black;
+                resize: none;
+            }
 
-    .contact-grid div {
-        margin-right: 20px;
-    }
+            textarea {
+                height: 200px;
+            }
+        }
 
-    .contact-grid div:last-child {
-        margin-right: 0;
-    }
+        .social-medias {
+            margin: calc(3*var(--spacing-unit)) auto;
 
-    .contact-grid div a {
-        display: block;
-        text-decoration: none;
-        font-size: 20px;
-        color: var(--main-color);
+            a {
+                font-size: var(--h3-font);
+                margin: 0 calc(2*var(--spacing-unit));
+                color: var(--main-color);
+            }
+        }
     }
 }
 
