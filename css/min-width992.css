@@ -24,7 +24,7 @@
             display: none;
         }
 
-        .navbar {
+        #navbar {
             display: flex;
             a {
                 margin: var(--spacing-unit) calc(2 * var(--spacing-unit));
