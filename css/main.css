@@ -119,7 +119,7 @@ header {
     min-height: 100vh;
     width: 100%;
 
-    video {
+    img {
         position: absolute;
         left: 0;
         top: 0;
