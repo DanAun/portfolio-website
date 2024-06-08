@@ -76,6 +76,8 @@ header {
     overflow: hidden;
     position: fixed;
     width: 100%;
+    background-color: black;
+    opacity: 0.9;
     font-size: var(--nav-font);
     font-weight: bold;
     margin: 0;
