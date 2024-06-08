@@ -132,7 +132,10 @@ header {
 
     .home-text {
         margin: calc(5*var(--spacing-unit));
-        color: var(--text-color);
+
+        * {
+           color: var(--text-color);
+        }
     }
 }
 
