@@ -1,0 +1,129 @@
+/* Defining some variables to be used in the styles */
+:root {
+    --bg-color: #0f1016;
+    --text-color: white;
+    --main-color: #25d74e;
+    --second-color: gray;
+    --h2-font: 30px;
+    --h3-font: 20px;
+    --h4-font: 17px;
+    --h5-font: 13px;
+    --p-font: 13px;
+    --border-radius: 5px;
+    --spacing-unit: 10px;
+    --nav-font: 22px;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    :root {
+        --h1-font: 90px;
+        --h2-font: 40px;
+        --h3-font: 25px;
+        --h4-font: 20px;
+        --h5-font: 16px;
+        --p-font: 16px;
+        --spacing-unit: 12px;
+    }
+}
+
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: var(--h1-font);
+    margin-bottom: calc(4*var(--spacing-unit));
+}
+
+h2 {
+    font-size: var(--h2-font);
+    margin-bottom: calc(2*var(--spacing-unit));
+}
+
+h3 {
+    font-size: var(--h3-font);
+    margin-bottom: calc(2*var(--spacing-unit));
+}
+
+h4 {
+    font-size: var(--h4-font);
+    margin: var(--spacing-unit) 0;
+}
+
+h5 {
+    font-size: var(--h5-font);
+    margin-bottom: var(--spacing-unit);
+}
+
+p {
+    font-size: var(--p-font);
+    margin-bottom: var(--spacing-unit);
+    color: var(--second-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    font-size: var(--nav-font);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+    .hotbar {
+        display: flex;
+        align-items: center;
+
+        .logo {
+            text-decoration: none;
+            margin: var(--spacing-unit) calc(2 * var(--spacing-unit));
+
+            span {
+                color: var(--main-color);
+            }
+        }
+    }
+}
+
+main {
+    display: inline-block;
+    max-width: 80%;
+    margin: calc(3*var(--nav-font)) 10%;
+
+    img {
+        width: min(100%, 400px);
+    }
+
+    figure {
+        margin: calc(3*var(--spacing-unit)) 0;
+    }
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+	padding: 7px 13px;
+    margin: var(--spacing-unit) 0;
+	border-radius: var(--border-radius);
+	font-size: var(--h5-font);
+	background: var(--main-color);
+	color: var(--text-color);
+	border: 1px solid var(--main-color);
+	transition: all .40s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--main-color);
+    }
+}

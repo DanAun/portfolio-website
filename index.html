@@ -11,7 +11,7 @@
     gtag('config', 'G-ZKQ09W5M62');
     </script>
     <!-- End of Google tag -->
-    
+
     <title>Portfolio</title>
     <link rel="icon" type="image/webp" href="/images/favicon.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +27,7 @@
 <body>
     <header>
         <div class="hotbar">
-            <span class="logo">Port<span>folio</span></span>
+            <a href="#home" class="logo">Port<span>folio</span></a>
             <i class='bx bx-menu' onclick="toggleNavbar()"></i>
         </div>
         <nav id="navbar" onclick="toggleNavbar()">
@@ -47,7 +47,7 @@
             <h4>Hello</h4>
             <h1>I'm Daniel Aunan</h1>
             <h3>Computer Science Student & Programming Enthusiast</h3>
-            <a href="#about" class="button">Get to know me</a>
+            <a href="#projects" class="button">View my Projects</a>
         </div>
     </section>
     <section id="about">
@@ -158,8 +158,15 @@
         <div class="projects-content">
             <h2>My Projects</h2>
             <h4>Here are some of my proudest works.</h4>
-            <div class="projects-grid">
-                <h2>Coming soon!</h2>
+            <div class="projects-container">
+                <a href="projects/building-compiler-and-vhdl-microprocessor.html" class="project-card">
+                    <img src="images/project1-fig3.png" alt="Project 1">
+                    <h5>Building a C-like Language Compiler and Microprocessor</h5>
+                </a>
+                <a class="project-card">
+                    <img src="/images/coming-soon.png" alt="Project coming soon">
+                    <h5>I'm currently working on new projects</h5>
+                </a>
             </div>
         </div>
     </section>
