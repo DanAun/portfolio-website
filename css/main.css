@@ -133,8 +133,8 @@ header {
     .home-text {
         margin: calc(5*var(--spacing-unit));
 
-        * {
-           color: var(--text-color);
+        h3, h4 {
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
         }
     }
 }
