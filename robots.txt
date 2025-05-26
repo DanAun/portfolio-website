@@ -1,3 +1,4 @@
 # Prevents images from appearing in search results
 User-agent: *
 Disallow: /images/
+Allow: /images/favicon.webp
