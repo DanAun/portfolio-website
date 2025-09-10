@@ -4,13 +4,26 @@
     <title>Daniel Aunan | Portfolio</title>
     <link rel="icon" type="image/ico" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Daniel Aunan | Portfolio" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/min-width992.css">
     <link rel="stylesheet" href="css/min-width1200.css">
 
     <!-- Imports the boxicons stylesheet-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+     <!-- SEO Metadata -->
+    <meta name="description" content="Portfolio of Daniel Aunan, a cybersecurity professional. Explore projects on secure self-hosted media servers, cloud security, and compiler & microprocessor design.">
+    <meta name="keywords" content="Daniel Aunan, portfolio, cybersecurity, self-hosting, Linux server, SSH hardening, Jellyfin, Certbot, TLS, Cloudflare, penetration testing, microprocessor, compiler, Flex, Bison, VHDL">
+    <meta name="author" content="Daniel Aunan">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Daniel Aunan | Portfolio">
+    <meta property="og:description" content="Explore Daniel Aunan's portfolio featuring projects in cybersecurity, cloud security, self-hosted media servers, and compiler & microprocessor design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://daniel.aunan.org">
+    <meta property="og:image" content="https://daniel.aunan.org/images/profile.webp">
+    <meta property="og:site_name" content="Daniel Aunan Portfolio">
 
 </head>
 
@@ -69,73 +82,73 @@
         <div class="skills-grid">
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/c-logo.svg" alt="C programming language logo">
+                    <img src="images/logos/c-logo.svg" alt="C programming language logo">
                 </div>
                 <h5>C</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/java-logo.svg" alt="Java programming language logo">
+                    <img src="images/logos/java-logo.svg" alt="Java programming language logo">
                 </div>
                 <h5>Java</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/python-logo.svg" alt="Python programming language logo">
+                    <img src="images/logos/python-logo.svg" alt="Python programming language logo">
                 </div>
                 <h5>Python</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/x86-logo.svg" alt="x86 architecture logo">
+                    <img src="images/logos/x86-logo.svg" alt="x86 architecture logo">
                 </div>
                 <h5>x86 Architecture </h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/cisco-logo.svg" alt="Cisco logo">
+                    <img src="images/logos/cisco-logo.svg" alt="Cisco logo">
                 </div>
                 <h5>CCNA</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/azure-logo.svg" alt="Azure logo">
+                    <img src="images/logos/azure-logo.svg" alt="Azure logo">
                 </div>
                 <h5>Azure</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/github-logo.svg" alt="GitHub logo">
+                    <img src="images/logos/github-logo.svg" alt="GitHub logo">
                 </div>
                 <h5>GitHub</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/postgresql-logo.svg" alt="PostgreSQL logo">
+                    <img src="images/logos/postgresql-logo.svg" alt="PostgreSQL logo">
                 </div>
                 <h5>PostgreSQL</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/aws-logo.svg" alt="Amazon Web Services logo">
+                    <img src="images/logos/aws-logo.svg" alt="Amazon Web Services logo">
                 </div>
                 <h5>AWS</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/linux-logo.svg" alt="Linux logo">
+                    <img src="images/logos/linux-logo.svg" alt="Linux logo">
                 </div>
                 <h5>Linux</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/metasploit-logo.svg" alt="Metasploit framework logo">
+                    <img src="images/logos/metasploit-logo.svg" alt="Metasploit framework logo">
                 </div>
                 <h5>Metasploit</h5>
             </div>
             <div class="skill">
                 <div class="img-border">
-                    <img src="images/burpsuite-logo.svg" alt="Burp Suite logo">
+                    <img src="images/logos/burpsuite-logo.svg" alt="Burp Suite logo">
                 </div>
                 <h5>Burp Suite</h5>
             </div>
@@ -147,14 +160,19 @@
             <h2>My Projects</h2>
             <h4>Here are some of my proudest works.</h4>
             <div class="projects-container">
-                <a href="projects/building-compiler-and-vhdl-microprocessor.html" class="project-card">
-                    <img src="images/project1.jpg" alt="Project 1">
+                <a href="projects/building-compiler-and-vhdl-microprocessor.html" id="project1" class="project-card">
+                    <img src="images/project1/project1-card.jpg" alt="Project 1">
                     <h5>C-like Language Compiler and Microprocessor</h5>
                     <button class="button">View project</button>
                 </a>
-                <a href="https://aitbytes.github.io/Securite-Cloud" class="project-card">
-                    <img src="images/cloud-security.webp" alt="Project coming soon">
+                <a href="https://aitbytes.github.io/Securite-Cloud" id="project2" class="project-card">
+                    <img src="images/project2/project2-card.webp" alt="Image of cloud security">
                     <h5>Learning about Cloud Security</h5>
+                    <button class="button">View project</button>
+                </a>
+                <a href="projects/self-hosted-media-server.html" id="project3" class="project-card">
+                    <img src="images/project3/project3-card.jpg" alt="Project 3">
+                    <h5>Self Hosted Media Server</h5>
                     <button class="button">View project</button>
                 </a>
                 <a class="project-card">

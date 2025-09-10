@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>From Trash to Treasure: My Self-Hosted Streaming Adventure</title>
+    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/projects.css">
+
+    <!-- SEO Metadata -->
+    <meta name="description" content="How I turned an abandoned laptop into a secure, self-hosted streaming platform with Jellyfin, TLS automation, and hardening. A journey of learning and cybersecurity reflections.">
+    <meta name="keywords" content="cybersecurity, self-hosting, Jellyfin, Linux server, SSH hardening, Certbot, TLS automation, Cloudflare, firewall, media server">
+    <meta name="author" content="Daniel Aunan">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Building a Self-Hosted Streaming Platform">
+    <meta property="og:description" content="From a broken-screen laptop to a secure streaming platform: my journey with Linux, Jellyfin, SSH hardening, TLS automation, and Cloudflare.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://daniel.aunan.org/projects/self-hosted-media-server.html">
+
+</head>
+<body>
+    <header>
+        <div class="hotbar">
+            <a href="/#projects" class="logo">Port<span>folio</span></a>
+        </div>
+    </header>
+    
+    <main class="project-content">
+        <h1 class="project-title">From Trash to Treasure: My Self-Hosted Streaming Adventure</h1>
+        <p class="intro">
+            It all started with a laptop I found in the trash — broken screen, dust everywhere, 
+            but surprisingly powerful under the hood. Instead of tossing it aside, I saw a challenge:
+            could I turn this forgotten machine into something valuable?
+        </p>
+
+        <section class="story-block">
+            <h2>First Boot: Wrestling with Wi-Fi</h2>
+            <p>
+                With no Ethernet port, the first hurdle was just getting Ubuntu Server online. 
+                I spent a while battling <code>wpa_supplicant</code>, because setting up WiFi connectivity on a laptop with a half-broken screen is no easy task.
+                Later on I was able to acquire a USB-C Ethernet adapter made streaming far more stable. 
+            </p>
+            <p class="reflection">
+                Looking back, it hadn't occurred to me to use a USB-C Ethernet adapter until I came across one.
+                That tiny adapter made such a difference — it's often the simple solutions that work best.
+
+            </p>
+        </section>
+
+        <section class="story-block">
+            <h2>Locking the Doors: SSH Hardening</h2>
+            <p>
+                Exposing a server to the internet without care is like leaving your house unlocked. 
+                I leaned heavily on <a href="https://sshaudit.com/" target="_blank">SSHaudit</a> to guide me. 
+                Password logins were gone, replaced with keys. Weak ciphers like <code>arcfour</code> and 
+                <code>cbc</code> were stripped away. Only strong modern ones remained, 
+                such as <code>chacha20-poly1305@openssh.com and aes256-gcm@openssh.com</code>.
+            </p>
+            <p class="reflection">
+                It was here I realized how dangerous defaults can be. 
+                Even updated software carry legacy baggage due to compatability and unless need them you should remove them.
+            </p>
+        </section>
+
+        <section class="story-block">
+            <h2>Discovering Jellyfin</h2>
+            <p>
+                Installing Jellyfin was a turning point. Suddenly, this trash laptop was no longer just a 
+                server — it was a private streaming platform. 
+            </p>
+            <figure>
+                <img src="/images/project3/jellyfin-ui.jpg" alt="Jellyfin dashboard">
+                <figcaption>The Jellyfin dashboard that made the project feel alive.</figcaption>
+            </figure>
+            <p class="reflection">
+                This was the “wow” moment: seeing a dead machine reborn with a purpose.
+            </p>
+        </section>
+
+        <section class="story-block">
+            <h2>TLS and the Joy of Automation</h2>
+            <p>
+                At first, I played with self-signed certificates, but the real breakthrough was 
+                setting up Certbot with automatic renewal via <code>systemd</code>. 
+                Suddenly, security wasn't something I had to remember — it was just there, quietly doing its job.
+            </p>
+            <p>
+                Later, moving behind Cloudflare not only added resilience thanks to WAF and DDoS protection but also
+                protected my server's IP address from being exposed.
+            </p>
+            <p class="reflection">
+                The lesson? Automation is more than convenience — it's peace of mind.
+            </p>
+        </section>
+
+        <section class="story-block">
+            <h2>Adding the Extras</h2>
+            <p>
+                With the basics solid, I couldn't resist: Sonarr, Radarr, and Prowlarr came next. 
+                They automated media handling via Usenet (what else did you think? 😉). 
+            </p>
+            <p class="reflection">
+                The ecosystem grew organically — each tool taught me a little more about 
+                networking, automation, and system monitoring.
+            </p>
+        </section>
+
+        <section class="conclusion">
+            <h2>What I Learned</h2>
+            <ul>
+                <li>Old hardware isn't worthless — it's an opportunity to learn and create something useful.</li>
+                <li>Defaults can be dangerous; hardening is important, don't blindly trust defaults.</li>
+                <li>Security and convenience can coexist — if you design for both.</li>
+            </ul>
+            <p>
+                In the end, I am really happy with my server. I use it regularly with friends to watch movies together. However it was more than just a media server project. 
+                It was a reminder of why I love cybersecurity: 
+                finding the balance between building something useful and making it secure.
+            </p>
+        </section>
+    </main>
+</body>
+</html>

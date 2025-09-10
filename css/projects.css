@@ -1,0 +1,220 @@
+/* =========================================
+   Root Variables
+   ========================================= */
+:root {
+    --bg-color: #0f1016;
+    --text-color: #ffffff;
+    --main-color: #25d74e;
+    --second-color: #cccccc;
+
+    --accent-bg: #161821;
+    --shadow: 0 4px 15px rgba(0,0,0,0.5);
+    --radius: 12px;
+
+    --h1-font: 40px;
+    --h2-font: 30px;
+    --h3-font: 24px;
+    --h4-font: 18px;
+    --p-font: 16px;
+    --nav-font: 22px;
+}
+
+/* Responsive adjustments */
+@media only screen and (min-width: 992px) {
+    :root {
+        --h1-font: 60px;
+        --h2-font: 40px;
+        --h3-font: 28px;
+        --h4-font: 20px;
+        --p-font: 17px;
+    }
+}
+
+/* =========================================
+   Global Reset & Typography
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+}
+
+body {
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: var(--h1-font);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+h3 {
+    font-size: var(--h3-font);
+    margin-bottom: 12px;
+}
+
+h4 {
+    font-size: var(--h4-font);
+    margin-bottom: 10px;
+}
+
+p, li {
+    font-size: var(--p-font);
+    color: var(--second-color);
+    margin-bottom: 15px;
+}
+
+ul {
+    margin: 10px 0 20px 20px;
+}
+
+/* =========================================
+   Header / Navbar
+   ========================================= */
+header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.9;
+    font-size: var(--nav-font);
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.hotbar {
+    display: flex;
+    align-items: center;
+}
+
+.hotbar .logo {
+    text-decoration: none;
+    margin: 12px 20px;
+}
+
+.hotbar .logo span {
+    color: var(--main-color);
+}
+
+/* =========================================
+   Main Content
+   ========================================= */
+main {
+    display: block;
+    max-width: 900px;
+    margin: 120px auto 60px auto;
+    padding: 0 20px;
+}
+
+/* Intro paragraph */
+.intro {
+    font-size: 18px;
+    color: var(--second-color);
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   Story Blocks
+   ========================================= */
+.story-block {
+    margin: 50px 0;
+    padding: 30px;
+    background: var(--accent-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.story-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+.story-block h2 {
+    margin-bottom: 15px;
+}
+
+.reflection {
+    margin-top: 20px;
+    padding: 15px 20px;
+    font-style: italic;
+    background: #20222e;
+    border-left: 4px solid var(--main-color);
+    border-radius: var(--radius);
+    color: var(--second-color);
+}
+
+/* =========================================
+   Figures
+   ========================================= */
+figure {
+    margin: 25px 0;
+    text-align: center;
+}
+
+figure img {
+    width: min(100%, 500px);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--second-color);
+}
+
+/* =========================================
+   Conclusion
+   ========================================= */
+.conclusion {
+    margin: 70px 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #161821, #1c1e2a);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.conclusion h2 {
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.conclusion p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+/* =========================================
+   Buttons
+   ========================================= */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 18px;
+    margin: 15px 0;
+    border-radius: var(--radius);
+    font-size: var(--p-font);
+    background: var(--main-color);
+    color: var(--text-color);
+    border: 1px solid var(--main-color);
+    transition: all .3s ease;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
