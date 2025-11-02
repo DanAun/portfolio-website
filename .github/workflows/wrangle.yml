@@ -1,4 +1,4 @@
-name: Publish to norginsa.no
+name: Deploy with wrangle
 
 on:
   push:
